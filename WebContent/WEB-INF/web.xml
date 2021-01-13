@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+id="WebApp_ID" version="4.0">
+
+  <!-- Root WebApplication context를 만듬 -->
+  <listener>
+  <!-- WebApplication이 WAS에 배치할 때 발생하는 이벤트를 처리하는 객체(handler) 등록 -->
+	  <listener-class>
+	  		org.springframework.web.context.ContextLoaderListener
+	  </listener-class>
+  </listener>
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>classpath:spring/root/*.xml</param-value>
+  </context-param>
+  
+  
+  <!-- webApplicationContext 생성 -->
+  <servlet>
+  	<servlet-name>dispatcher</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<init-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>classpath:spring/dispatcher/*.xml</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup> <!-- 숫자가 0보다 크면 서버가 스타트되면서 서블릿을 초기화 합니다-->
+  </servlet>
+  <!-- http://localhost:8080/webapp1/dispatcher1/xxx -->
+  <servlet-mapping>
+  	<servlet-name>dispatcher</servlet-name>
+  	<url-pattern>/</url-pattern> <!-- /앞에 context root까지 생략이 되어있음 (dispatcher1/xxx의 /임)-->
+  </servlet-mapping>
+ 
+</web-app>
