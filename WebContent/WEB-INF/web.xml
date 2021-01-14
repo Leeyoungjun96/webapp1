@@ -15,6 +15,20 @@ id="WebApp_ID" version="4.0">
   	<param-value>classpath:spring/root/*.xml</param-value>
   </context-param>
   
+  <!-- POST 방식의 문자셋 인코딩 설정 -->
+  <filter>
+  	<filter-name>encodingFilter</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  		<init-param>
+  			<param-name>encoding</param-name>
+  			<param-value>UTF-8</param-value>
+  		</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>encodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
   
   <!-- webApplicationContext 생성 -->
   <servlet>
@@ -31,5 +45,5 @@ id="WebApp_ID" version="4.0">
   	<servlet-name>dispatcher</servlet-name>
   	<url-pattern>/</url-pattern> <!-- /앞에 context root까지 생략이 되어있음 (dispatcher1/xxx의 /임)-->
   </servlet-mapping>
- 
+
 </web-app>

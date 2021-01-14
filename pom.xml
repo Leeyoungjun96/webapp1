@@ -55,7 +55,15 @@
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-webmvc</artifactId>
 	</dependency>
-		
+	
+	<!-- 자바 스탠다드 태그 라이브러리  -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	
+	
  </dependencies>
   
 </project>

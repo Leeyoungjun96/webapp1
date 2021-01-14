@@ -41,29 +41,29 @@ contentType: .jsp가 실행 후 만들어지는 결과물의 종류
 				<jsp:include page="/WEB-INF/views/include/menu.jsp"/>
 				
 				<div class="content">
-				<div class="sector">
-					<h5>스크립트릿/표현식</h5>
-					<div>
-						<%-- Script let(스크립트릿) --%>
-						<%
-						Date now = new Date();
-						SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
-						String strNow = sdf.format(now);
-						%>
-						<%-- Expression(표현식) --%>
-						오늘 날짜: <%=strNow%>
+					<div class="sector">
+						<h5>스크립트릿/표현식</h5>
+						<div>
+							<%-- Script let(스크립트릿) --%>
+							<%
+							Date now = new Date();
+							SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
+							String strNow = sdf.format(now);
+							%>
+							<%-- Expression(표현식) --%>
+							오늘 날짜: <%=strNow%>
+						</div>
 					</div>
-				</div>
-				<div class="sector">
-					<h5>스크립트릿/표현식</h5>
-					<div>
-					<%for(int i=1; i<=6; i++) {%>
-						 <h<%=i%>> Hello JSP </h<%=i%>>
-					<%} %>
+					<div class="sector">
+						<h5>스크립트릿/표현식</h5>
+						<div>
+						<%for(int i=1; i<=6; i++) {%>
+							 <h<%=i%>> Hello JSP </h<%=i%>>
+						<%} %>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</body>
+	</body>
 </html>
