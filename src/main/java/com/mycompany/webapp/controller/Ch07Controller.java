@@ -17,7 +17,7 @@ import com.mycompany.webapp.dto.Ch07Board;
 @RequestMapping("/ch07")
 public class Ch07Controller {
 	public static final Logger logger 
-		= LoggerFactory.getLogger("Ch06Controller");
+		= LoggerFactory.getLogger(Ch07Controller.class);
 	
 	@GetMapping("/content")
 	public String content() {

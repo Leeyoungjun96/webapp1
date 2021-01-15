@@ -1,4 +1,5 @@
 <%@ page  contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,26 +22,33 @@
 			<div class="mainCenter" >
 				<jsp:include page="/WEB-INF/views/include/menu.jsp"/>
 				<div class="content">
-					<h5>Model 객체를 이용한 데이터 전달</h5>
 					<div class="sector">
-						<a class="btn btn-info btn-sm" href="method1">데이터 전달</a>
+					<h5>파일 업로드</h5>
+						<form method="post" enctype="multipart/form-data" action="fileupload">
+							<input type="text" name="uid" placeholder="아이디"/><br/>
+							<input type="text" name="uname" placeholder="이름" /><br/>
+							<input type="password" name="upassword" placeholder="패스워드"/><br/>
+							<input type="file" name="uphoto" /><br/>
+							<input class="btn btn-primary btn-sm" type="submit" value="회원가입"/><br/>
+						</form>
+					</div>
+					
+					<div class="sector">
+					<h5>파일 리스트</h5>
+						<script>
+							$(function(){
+								$.ajax({
+									url: "photolist", /* 요청경로 */
+									method: "get",
+									success: function(data){
+										$("#photolist").html(data);
+									}
+								});
+							});
+						</script>
+						<div id ="photolist"></div>
 					</div>
 				</div>
-				
-				<div class="content">
-					<h5>Model 객체를 이용한 데이터 전달</h5>
-					<div class="sector">
-						<a class="btn btn-info btn-sm" href="method2">데이터 전달</a>
-					</div>
-				</div>
-				
-				<div class="content">
-					<h5> 컬렉션을 이용한 데이터 전달</h5>
-					<div class="sector">
-						<a class="btn btn-info btn-sm" href="method3">데이터 전달</a>
-					</div>
-				</div>
-				
 				
 			</div>
 		</div>

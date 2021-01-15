@@ -15,4 +15,5 @@
 				expression="org.springframework.stereotype.Repository"/>
 		</context:component-scan>
 		
+		
 </beans>
