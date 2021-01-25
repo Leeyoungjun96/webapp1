@@ -1,0 +1,17 @@
+package com.mycompany.webapp.dao;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
+
+import com.mycompany.webapp.controller.Ch13Controller;
+
+@Repository
+public class Ch13BoardDao3 {
+	public static final Logger logger 
+	= LoggerFactory.getLogger(Ch13BoardDao3.class);
+	
+	public void select() {
+		logger.info("게시물을 가져옵니다.");
+	}
+}

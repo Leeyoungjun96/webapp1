@@ -20,6 +20,11 @@
 		<a href="<%=application.getContextPath()%>/ch08/content">Data-delivery(httpsession)</a></li>
 		<li class="chapter">Ch09. 
 		<a href="<%=application.getContextPath()%>/ch09/content">File upload, download</a></li>
-		
+		<li class="chapter">Ch13. 
+		<a href="<%=application.getContextPath()%>/ch13/content">Dependency Injection</a></li>
+		<li class="chapter">Ch14. 
+		<a href="<%=application.getContextPath()%>/ch14/content">Connection test</a></li>
+		<li class="chapter">Ch14. 
+		<a href="<%=application.getContextPath()%>/ch14/boardlist">Data Access(Board Sample)</a></li>
 	</ul>			
 </div>
