@@ -26,5 +26,7 @@
 		<a href="<%=application.getContextPath()%>/ch14/content">Connection test</a></li>
 		<li class="chapter">Ch14. 
 		<a href="<%=application.getContextPath()%>/ch14/boardlist">Data Access(Board Sample)</a></li>
+		<li class="chapter">Ch14. 
+		<a href="<%=application.getContextPath()%>/ch14/boardlist2">Data Access2</a></li>
 	</ul>			
 </div>
